@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -45,7 +46,7 @@
     <section class="hero">
       <div class="conteiner">
         <h1 class="hero-text">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="button">Замовити послугу</button>
+        <button type="button" class="button" data-modal-open>Замовити послугу</button>
       </div>
 
     </section>
@@ -459,7 +460,18 @@
       </div>
     </div>
   </footer>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="close" data-modal-close>
+        <svg class="icon-close">
+          <use href="./images/close-black.svg">
+          </use>
+      </button>
 
+      </svg>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 
 
