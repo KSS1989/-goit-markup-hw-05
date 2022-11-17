@@ -294,6 +294,25 @@ ul {
   margin-left: 30px;
 }
 
+.doing-position {
+  position: relative;
+}
+
+.doing-name {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 370px;
+  height: 70px;
+  padding-top: 27px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--fon-color);
+  background: rgba(47, 48, 58, 0.8);
+}
+
 .doing {
   padding-bottom: var(--paddidng-bottom-section);
 }
@@ -711,12 +730,12 @@ ul {
 }
 
 .button-close {
-  position: absolute;
+  position: fixed;
   width: 30px;
   height: 30px;
   top: 8px;
   right: 8px;
-  padding: 0;
+  padding: 6px;
   border-radius: 50%;
   background: var(--fon-color);
   fill: #000000;
@@ -725,7 +744,7 @@ ul {
 }
 
 .icon-close {
-  width: 11px;
-  height: 11px;
-  fill: #000000;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
