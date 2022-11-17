@@ -46,6 +46,31 @@ ul {
   color: var(--logo-color);
 }
 
+.current-sate {
+  position: relative;
+}
+
+.current-1::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 45px;
+  height: 4px;
+  background: #2196F3;
+  border-radius: 2px;
+}
+
+.current-2::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 74px;
+  height: 4px;
+  background: #2196F3;
+  border-radius: 2px;
+}
+
+
 /* --------------ШАПКА--------------- */
 .header {
   border-bottom-width: 1px;
@@ -76,6 +101,8 @@ ul {
 .icon-nav.smartphone:hover,
 .envelope:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact {
@@ -93,6 +120,8 @@ ul {
 .contact:focus {
   color: var(--logo-color);
   fill: var(--logo-color);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------------ЛОГО-----------------*/
@@ -151,6 +180,8 @@ ul {
 .sate:hover,
 .sate:focus {
   color: var(--logo-color);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -197,6 +228,8 @@ ul {
 .button:focus {
   background-color: var(--fon-color);
   color: var(--logo-color);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-text {
@@ -407,12 +440,16 @@ ul {
 .bottom-social:hover {
   background-color: var(--logo-color);
   color: var(--fon-color);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social:focus,
 .social:hover {
   fill: var(--fon-color);
   background-color: var(--logo-color);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-item+.social-item {
@@ -469,6 +506,8 @@ ul {
 .klients-sate:focus {
   fill: var(--logo-color);
   border: 1px solid var(--logo-color);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----------------ПІДВАЛ---------------- */
@@ -513,6 +552,8 @@ ul {
 .map:hover,
 .map:focus {
   color: var(--logo-color);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address {
@@ -535,6 +576,8 @@ ul {
 .contact-bottom:hover,
 .contact-bottom:focus {
   color: var(--logo-color);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -583,12 +626,16 @@ ul {
 .b-bottom-social:hover {
   background-color: var(--logo-color);
   color: var(--fon-color);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .b-social:focus,
 .b-social:hover {
   fill: var(--fon-color);
   background-color: var(--logo-color);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -633,9 +680,44 @@ ul {
   background-color: var(--logo-color);
   color: var(--fon-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -------------НАШІ РОБОТИ------------------- */
+.box {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  Width: 100%;
+  Height: 100%;
+  padding-top: 63px;
+  padding-left: 24px;
+  padding-right: 24px;
+  transform: translateY(100%);
+  background: rgba(33, 150, 243, 0.9);
+
+}
+
+.projects-karts:hover .overlay,
+.projects-karts:focus .overlay {
+  transform: translateX(0);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.overlay-text {
+  font-family: 'Roboto';
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--fon-color);
+}
 
 .portfilio {
   display: flex;
@@ -662,6 +744,9 @@ ul {
 .projects-karts:hover,
 .projects-karts:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .item-foto {
@@ -706,6 +791,8 @@ ul {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  overflow: visible;
+
 }
 
 .backdrop {
@@ -723,7 +810,6 @@ ul {
   height: 581px;
   top: 50%;
   left: 50%;
-
   transform: translate(-50%, -50%);
   background-color: var(--fon-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -744,7 +830,10 @@ ul {
 }
 
 .icon-close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 18px;
   height: 18px;
-  fill: currentColor;
 }
