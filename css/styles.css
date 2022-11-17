@@ -704,11 +704,13 @@ ul {
   height: 581px;
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
   background-color: var(--fon-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.close {
+.button-close {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -717,10 +719,13 @@ ul {
   padding: 0;
   border-radius: 50%;
   background: var(--fon-color);
+  fill: #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
+
 }
 
 .icon-close {
   width: 11px;
   height: 11px;
+  fill: #000000;
 }
