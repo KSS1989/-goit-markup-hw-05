@@ -9,6 +9,7 @@
   --border-portfolio-color: #eeeeee;
   --paddidng-top-section: 94px;
   --paddidng-bottom-section: 94px;
+  --time-animacion: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -42,7 +43,7 @@ ul {
   padding: 0 15px;
 }
 
-.item>.current {
+a.current {
   color: var(--logo-color);
 }
 
@@ -50,7 +51,7 @@ ul {
   position: relative;
 }
 
-.current-1::after {
+.current::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -78,21 +79,22 @@ ul {
   width: 16px;
   height: 12px;
   margin-right: 10px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-nav.smartphone {
   width: 10px;
   height: 16px;
   margin-right: 10px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .icon-nav.smartphone:hover,
 .envelope:hover,
 .icon-nav.smartphone:hover,
 .envelope:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: transform 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact {
@@ -104,14 +106,14 @@ ul {
   color: var(--text-color);
   fill: var(--text-color);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact:hover,
 .contact:focus {
   color: var(--logo-color);
   fill: var(--logo-color);
-  transition: transform 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------------ЛОГО-----------------*/
@@ -158,20 +160,17 @@ ul {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-
   font-weight: 500;
   line-height: 1.14;
   text-decoration: none;
   letter-spacing: 0.02em;
-
   color: var(--titel-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sate:hover,
 .sate:focus {
   color: var(--logo-color);
-  transition: transform 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -183,9 +182,7 @@ ul {
   margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
-
   text-align: center;
-
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-fone.jpg);
   background-color: var(--fon-hero-color);
@@ -194,38 +191,11 @@ ul {
   background-repeat: no-repeat;
 }
 
-.button {
-  margin-top: 30px;
-  padding: 10px 32px;
 
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  color: var(--fon-color);
-  background-color: var(--logo-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-.button:hover,
-.button:focus {
-  background-color: var(--fon-color);
-  color: var(--logo-color);
-  transition: transform 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .hero-text {
   width: 696px;
   margin: auto;
-
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -252,7 +222,6 @@ ul {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -271,10 +240,8 @@ ul {
   display: flex;
   width: 270px;
   height: 120px;
-
   justify-content: center;
   align-items: center;
-
   background-color: var(--team-colof);
 }
 
@@ -288,19 +255,15 @@ ul {
 
 .benefits {
   margin-top: 30px;
-
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
-
   color: var(--titel-color);
 }
 
 .work-lits {
   margin-top: 10px;
-
   line-height: 1.71;
-
 }
 
 
@@ -409,37 +372,38 @@ ul {
   display: flex;
   width: 44px;
   height: 44px;
-
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
   border: none;
   color: var(--icon-color);
   background-color: var(--fon-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social {
   width: 20px;
   height: 20px;
   fill: currentColor;
-
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
 
 .bottom-social:focus,
 .bottom-social:hover {
   background-color: var(--logo-color);
   color: var(--fon-color);
-  transition: transform 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .social:focus,
 .social:hover {
   fill: var(--fon-color);
   background-color: var(--logo-color);
-  transition: transform 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .social-item+.social-item {
@@ -483,21 +447,20 @@ ul {
   display: inline-flex;
   width: 170px;
   height: 92px;
-
   justify-content: center;
   align-items: center;
-
   fill: var(--icon-color);
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .klients-sate:hover,
 .klients-sate:focus {
   fill: var(--logo-color);
   border: 1px solid var(--logo-color);
-  transition: transform 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----------------ПІДВАЛ---------------- */
@@ -505,10 +468,8 @@ ul {
 .bottom {
   padding-top: 60px;
   padding-bottom: 60px;
-
   line-height: 1.88;
   letter-spacing: 0.06em;
-
   color: var(--fon-color);
   background-color: var(--fon-hero-color);
 }
@@ -537,13 +498,12 @@ ul {
   line-height: 1.71;
   color: var(--fon-color);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .map:hover,
 .map:focus {
   color: var(--logo-color);
-  transition: transform 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address {
@@ -560,15 +520,13 @@ ul {
   line-height: 1.71;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .contact-bottom:hover,
 .contact-bottom:focus {
   color: var(--logo-color);
-  transition: transform 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .contacts-bottom+.contacts-bottom {
@@ -593,39 +551,36 @@ ul {
   display: flex;
   width: 44px;
   height: 44px;
-
   align-items: center;
   justify-content: center;
-
-
   border-radius: 50%;
   border: none;
-
   color: var(--fon-color);
   background: rgba(255, 255, 255, 0.1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .b-social {
   width: 20px;
   height: 20px;
   fill: currentColor;
-
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .b-bottom-social:focus,
 .b-bottom-social:hover {
   background-color: var(--logo-color);
   color: var(--fon-color);
-  transition: transform 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .b-social:focus,
 .b-social:hover {
   fill: var(--fon-color);
   background-color: var(--logo-color);
-  transition: transform 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -657,12 +612,12 @@ ul {
   font-size: 16px;
   line-height: 1.62;
   color: var(--titel-color);
-
   border: none;
   border-radius: 4px;
   cursor: pointer;
-
   background-color: var(--team-colof);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-portfolio:hover,
@@ -670,8 +625,7 @@ ul {
   background-color: var(--logo-color);
   color: var(--fon-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: transform 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 /* -------------НАШІ РОБОТИ------------------- */
@@ -690,15 +644,13 @@ ul {
   padding-left: 24px;
   padding-right: 24px;
   transform: translateY(100%);
-  background: rgba(33, 150, 243, 0.9);
-
+  background-color: rgba(33, 150, 243, 0.9);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-karts:hover .overlay,
 .projects-karts:focus .overlay {
   transform: translateX(0);
-  transition: transform 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -729,14 +681,12 @@ ul {
   display: block;
   text-decoration: none;
   color: var(--text-color);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-karts:hover,
 .projects-karts:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: transform 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .item-foto {
@@ -782,7 +732,6 @@ ul {
   opacity: 0;
   pointer-events: none;
   overflow: visible;
-
 }
 
 .backdrop {
@@ -792,7 +741,36 @@ ul {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.button {
+  margin-top: 30px;
+  padding: 10px 32px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--fon-color);
+  background-color: var(--logo-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--fon-color);
+  color: var(--logo-color);
+  opacity: 1;
+}
+
 
 .modal {
   position: absolute;
@@ -803,6 +781,7 @@ ul {
   transform: translate(-50%, -50%);
   background-color: var(--fon-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+
 }
 
 .button-close {
@@ -816,7 +795,6 @@ ul {
   background: var(--fon-color);
   fill: #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
-
 }
 
 .icon-close {
