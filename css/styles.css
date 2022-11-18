@@ -54,7 +54,8 @@ ul {
   position: absolute;
   content: "";
   bottom: 0;
-  width: 45px;
+  left: 0;
+  width: 100%;
   height: 4px;
   background: #2196F3;
   border-radius: 2px;
@@ -64,7 +65,8 @@ ul {
   position: absolute;
   content: "";
   bottom: 0;
-  width: 74px;
+  left: 0;
+  width: 100%;
   height: 4px;
   background: #2196F3;
   border-radius: 2px;
